@@ -4,8 +4,13 @@ html {
 }
 
 body {
-  margin: 0;
+  height: 100vh;
+  margin: 6.2rem 2.4rem;
   background: var(--clr-dark-blue-1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 *,
