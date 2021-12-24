@@ -8,53 +8,38 @@
   border-radius: 1.5rem;
 
   &__img {
+    background: url("../images/image-equilibrium.jpg") center/cover no-repeat;
     height: 30.2rem;
     width: 30.2rem;
-    background: var(--clr-primary-cyan);
-    position: relative;
-    overflow: hidden;
     border-radius: 8px;
 
+    transition: all 0.2s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &-view {
-      z-index: 1;
       opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.2s linear;
+      transition: opacity 0.2s linear;
     }
   }
 
-  &__img::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s linear;
-
-    background-image: url("../images/image-equilibrium.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    justify-self: center;
-  }
-
   &:hover {
+    .card__img {
+      background: linear-gradient(
+          rgba(0, 255, 247, 0.35),
+          rgba(0, 255, 247, 0.35)
+        ),
+        url("../images/image-equilibrium.jpg") center/cover no-repeat;
+    }
+
     .card__img-view {
       opacity: 1;
     }
 
     .card__title {
       color: var(--clr-primary-cyan);
-    }
-
-    .card__img::after {
-      opacity: 0.5;
     }
   }
 
